@@ -17,27 +17,31 @@
 <body>
     <div class="main-container">
         <header>
-            <nav>
-    <img src="img/Booki.png" alt="Logo Booki">
-    <ul id="Menu">
-         <li><a href="#"> Hébergements</a></li>
+            <nav class="main-nav">
+            <img src="img/Booki.png" alt="Logo Booki">
+            <ul class="menu">
+         <li><a href="#" class="active"> Hébergements</a></li>
          <li><a href="#"> Activités</a></li>
-    </ul>
+            </ul>
             </nav>
-            <div class="Geolocalisation">
+            </header>
 
+            
+<div class="info-group">
     <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-<p class="Description"> En plein centre-ville ou en pleine nature</p>
-<form class="Geolocalisation">
-    <img src="img/Geo.png" alt="">
-    <input type="text" placeholder="Marseille, France">
+    <p class="Description"> En plein centre-ville ou en pleine nature</p>
+
+<form class="search-bar">
+    <img src="img/Geo.png" alt="Icone geolocalisation">
+    <input type="text" name="location" placeholder="Marseille, France">
     <button type="submit">Rechercher</button>
 </form>
-             </div>
+          
 
 
  <!-- non utilisation de font awesome pour pas perdre de temps à chercher le bon icone à chaque fois, l'export de figma est plus rapide -->
-<div class="Buttons">
+  
+<div class="filter">
     <h2>Filtres</h2>  
     <button><img src="img/Billet.png" alt="Icone billet"> Économique</button>
     <button><img src="img/Homme.png" alt="Icone Homme"> Familial</button>
@@ -45,7 +49,8 @@
     <button><img src="img/Flamme.png" alt="Icone Flamme"> Nos pépites</button>
     <p><img src="img/I.png" alt="Icone Index"> Plus de 500 logements sont disponibles dans cette ville</p>
 </div>
-        </header>
+</div>
+        
 
 
         <main>

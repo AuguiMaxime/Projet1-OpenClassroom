@@ -2,6 +2,86 @@
 * {
     font-family: 'Raleway', sans-serif;
 }
+.nav img{
+    height: 19px;
+    width: 61.09px;
+}
+
+.main-nav {
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+    list-style: none;
+    display: flex;
+    gap: 68px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.menu a {
+    text-decoration: none;
+    color: black;
+    padding-top: 20px; 
+}
+
+.menu a:hover {
+    border-top: 2px solid #0065FC;
+    width: 100%;
+    color: #0065FC;
+    }
+
+h1{
+    font-size: 22px;
+    font-weight: 700;
+}
+.info-group p{
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 400;
+}
+::placeholder{color: black;}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px;
+    width: 377px;
+    height: 49px;
+    overflow: hidden;
+    
+    
+}
+.search-bar input{
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    border: none;
+    text-align: center;
+    width: 147px;
+    height: 21px;
+    padding: 24px;
+}
+
+.search-bar img{ 
+    width: 50px;
+    height: 49px;
+    background-color: #F2F2F2;
+}
+
+.search-bar button{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #0065FC;
+    cursor: pointer;
+    width: 132px;
+    height: 49px;
+    border: none;
+}
+
 
 :root {
     --main-color: #0065FC;
@@ -74,8 +154,26 @@ a {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+  
 }
-
+.hebergement-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hebergements-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    margin-bottom: 15px;
+    
+}
+.hebergements-cards img{
+    width:250.33px ;
+    height: 124px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px
+}
 /****** Populaires ***********/
 .populaires {
     width: 32%;
