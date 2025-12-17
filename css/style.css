@@ -226,8 +226,14 @@ margin-top: 20px;
     gap: 30px;
 }
 
-
-    
+h3 { 
+    font-size: 16px;
+    font-weight: 700;
+}
+    .hebergements-cards p{
+        font-size: 14px;
+        font-weight: 400;
+    }
     
 .card{   
     width: 100%;
@@ -235,7 +241,10 @@ margin-top: 20px;
     border-radius: 20px;
     background-color: white;
 }
-
+.more{
+    font-size: 18px;
+    font-weight: 700;
+}
 
 
 .hebergements-cards img{
