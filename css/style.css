@@ -82,7 +82,7 @@ h1{
     border: none;
 }
 
-.filter{
+.case-filter{
     display: flex;
     margin-top: 24px;
     margin-bottom: 15px;
@@ -93,6 +93,10 @@ h2{
     font-size: 18px;
     font-weight: 700;
     margin-right: 20px;
+}
+.filter {
+  display: flex;
+  gap: 20px;
 }
 .filter button{
     font-size: 17px;
