@@ -2,6 +2,8 @@
 * {
     font-family: 'Raleway', sans-serif;
 }
+
+/**  HEADER **/
 .main-nav img{
     height: 19px;
     width: 61.09px;
@@ -13,6 +15,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
   
    
 }
@@ -27,6 +31,8 @@
     text-decoration: none;
     color: black;
     padding-top: 20px; 
+    font-size: 22px;
+    font-weight: 700;
 }
 
 .menu a:hover {
@@ -39,12 +45,18 @@ h1{
     font-size: 22px;
     font-weight: 700;
 }
+
+/** texte aant search bar**/
+
 .info-group p{
     margin-top: 8px;
     font-size: 16px;
     font-weight: 400;
 }
 ::placeholder{color: black;}
+
+
+/** Barre de recherche **/
 
 .search-bar{
     display: flex;
@@ -63,7 +75,7 @@ h1{
     font-weight: 700;
     color: black;
     border: none;
-    text-align: center;
+    text-align: left;
     width: 147px;
     height: 21px;
     padding: 24px;
@@ -76,6 +88,10 @@ h1{
 }
 
 .search-bar button{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #ffffff;
     font-size: 18px;
     font-weight: 700;
@@ -85,6 +101,16 @@ h1{
     height: 49px;
     border: none;
 }
+
+.button-search {
+    display: flex; 
+}
+.icon-search {
+    display: none; 
+}
+
+/** Filtres**/
+
 
 .case-filter{
     display: flex;
@@ -121,7 +147,7 @@ h2{
     padding: 0 10px;
     }
 
-    .filter :hover{
+    .filter button:hover{
         background-color: #DEEBFF;
          opacity: 80%;}
 
@@ -135,7 +161,7 @@ h2{
     margin-bottom: 35px;
 }
 
-
+/** Code donné par openclassroom **/
 
 
 :root {
@@ -156,6 +182,7 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
+    min-width: 320px;
     padding: 0 50px;
     box-sizing: border-box;
 }
@@ -247,7 +274,6 @@ h3 {
     
 .card{   
     width: 100%;
-    height: 100%;
     border-radius: 20px;
     background-color: white;
 }
@@ -262,7 +288,7 @@ h3 {
     height: 124px;
     object-fit: cover;   
     border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px
+    border-top-right-radius: 20px
 }
 /****** Populaires ***********/
 .populaires {
@@ -409,6 +435,65 @@ h5{
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-    /* ... */
+@media (max-width: 767.98px){
+.main-nav{
+    flex-direction: column;
+    align-items: center;
+    gap: 10px
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+}
+ .menu a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0;
+        padding-bottom: 10px;
+    }
+.menu a:hover {
+    border-bottom: 2px solid #0065FC;
+    border-top: none;
+    }
+.search-bar{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.search-bar input { 
+    padding: 0 10px;
+     width: auto;
+      flex: 1; }
+
+
+
+.search-bar .button-search {
+    display: none;
+    }
+
+.search-bar .icon-search i {
+    padding: 0;
+    color: white !important;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 49px;
+    height: 49px;
+    background-color: #0065FC;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.icon-search{
+    width: 49px;
+    height: 49px;
+
+}
+
+
 }
