@@ -434,13 +434,20 @@ h5{
 }
 
 /* Small devices (phones, less than 768px) */
+
+
+
+     /* HEADER */ 
 @media (max-width: 767.98px){
 .main-nav{
+    position: relative;
     flex-direction: column;
-    align-items: center;
-    gap: 10px
+    gap: 30px;
+    
 }
 .menu {
+    position: relative;
+    margin: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -449,16 +456,44 @@ h5{
     font-weight: 400;
 }
  .menu a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-top: 0;
-        padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 10px;
+        
     }
-.menu a:hover {
-    border-bottom: 2px solid #0065FC;
-    border-top: none;
+.menu-border1{
+    position: absolute;
+    padding: 0;
+    background-color:  #F2F2F2;
+    left: 0;
+    width: 50vw;   /* viewport width = Largeur fenêtre / au lieu de 100% qui comprend les marges */ 
+    height: 2px; 
+    margin: 0;   
     }
+.menu-border2{
+    position: absolute;
+    padding: 0;
+    background-color:  #F2F2F2;
+    left: 50vw;   /* commence à la moitié de la page pour remplir le reste */
+    width: 50vw;
+    height: 2px; 
+    margin: 0;   
+    }
+
+.menu a:hover{
+    border-top: none; 
+}
+.menu li:hover .menu-border1 {
+    background-color: #0065FC;
+}
+
+.menu li:hover .menu-border2 {
+    background-color: #0065FC;
+}
+
+
 .search-bar{
     display: flex;
     align-items: center;
