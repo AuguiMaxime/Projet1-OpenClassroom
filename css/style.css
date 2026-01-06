@@ -237,6 +237,7 @@ a {
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
+    padding: 20px 50px;
 }
 
 .hebergements-and-populaires section {
@@ -244,6 +245,7 @@ a {
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
+    margin: 0;
 }
 
 /****** Hebergements ***********/
@@ -284,8 +286,8 @@ h3 {
     
 .card{   
     width: 100%;
-    border-radius: 20px;
     background-color: white;
+    margin-top: 30px;
 }
 .more{
     font-size: 18px;
@@ -295,9 +297,10 @@ h3 {
 
 .hebergements-cards img{
     width: 100%;
+    max-height: 124px;
     object-fit: cover;   
     border-top-left-radius: 20px;
-    border-top-right-radius: 20px
+    border-top-right-radius: 20px;
 }
 /****** Populaires ***********/
 .populaires {
@@ -308,6 +311,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .populaires-cards .card {
@@ -315,9 +319,11 @@ h3 {
 }
 
 .populaires-cards img {
+    height: 170px;
     width: 33%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    border-top-right-radius: 0;
 }
 
 .populaires-cards .card-content {
@@ -329,26 +335,34 @@ h3 {
     box-sizing: border-box;
 }
 
-.populaires-cards .card-title {
 
-}
 
 .populaires-cards .card-subtitle {
     margin: 0;
 }
 
-.populaires-cards .card-rating {
-}
+
 
 /*Activités*/
 
-.activity{
 
+.activity .section-title {
+    margin: 30px;
+    
 }
+
+.activity{
+    padding: 20px 50px;
+}
+
 .activity-card {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+    padding: 30px 30px;
+}
+.activity-card .card-content{
+    padding: 20px 19px 20px 19px;
 }
 
 
@@ -365,6 +379,7 @@ h3 {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     width: 100%;
+    height: 500px;
     object-fit: cover;
 }
 .activity h3 {
@@ -379,12 +394,15 @@ h3 {
     display: flex;
     justify-content: space-between;
     background-color: #F2F2F2;
+    padding: 20px 50px;
       
      
 }
 .footer-content{
+    width: 33%;
     list-style: none;
     gap: 15px;
+
 
     
 }
@@ -405,6 +423,7 @@ h5{
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
         flex-direction: column;
+        gap: 50px;
     }
 
     .hebergements {
@@ -433,31 +452,26 @@ h5{
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+    .cardbis img {
+        height: 200px;}
 }
 
 /* Small devices (phones, less than 768px) */
 
-
-
      /* HEADER */ 
 @media (max-width: 767.98px){
+   
 
- .main-container{
-    padding: 0 20px;
+ .main-container, body{
+    padding: 0;
+    margin: 0;
  }   
 .main-nav{
     flex-direction: column;
     gap: 30px;
     
 }
-.menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    font-size: 16px;
-    font-weight: 400;
-}
+
 .menu li { 
     width: 50%; 
 }
@@ -494,6 +508,7 @@ h5{
     margin: 0;   
     }
 
+    /* HEADER OVER */
 .menu a:hover{
     border-top: none; 
 }
@@ -504,9 +519,11 @@ h5{
 .menu li:hover .menu-border2 {
     background-color: #0065FC;
 }
-/* HEADER OVER */
+/* FIN HOVER */
 
-.info-group{padding-bottom: 15px;}
+.info-group{
+    padding-bottom: 15px;
+}
 
 .search-bar{
     display: flex;
@@ -572,7 +589,7 @@ h5{
  .populaires{
     display: flex; 
     flex-direction: column;
-    order: -1;  
+    order: -1; 
     
  }
  .hebergements{
@@ -613,8 +630,6 @@ h5{
 .hebergements-and-populaires .populaires { /* griser uniquement la partie populaire*/
     background-color: var(--main-bg-color);
     border-radius: 0;
-    width: 100vw;   /* récup du viewport width = Largeur fenêtre / pour enlever la marges */ 
-    transform: translateX(-5vw); /* Petite triche pour faire décaler de 5 et remplire la page*/
 
 }
 
@@ -639,8 +654,18 @@ h5{
     background-color: #fff;
 }
 
+.hebergements-cards .card-content {
+    padding: 15px;
+}
 
 /* ACTIVITES */
+.activity {
+    margin-top: 40px;
+}
+
+.activity-title{
+    margin-bottom:50px;
+}
 
 .cardbis {
     display: flex;
@@ -650,13 +675,12 @@ h5{
  .activity-card {
     display: flex;
     flex-direction: column;
-    grid-template-columns: 1fr; 
     gap: 12px;
 }
 .activity img{
     width: 100%;
 }
-.activity-card .card{
+.activity-card .cardbis{
     box-shadow: 0px 4px 4px rgba(0,0,0,0.1);
     background-color: #fff;
 }
@@ -667,5 +691,6 @@ h5{
     display: flex;
     flex-direction: column;
     align-items: baseline;
+   
 }
 }
