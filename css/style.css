@@ -56,8 +56,8 @@ header {
 .menu a {
     text-decoration: none;
     color: black;
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .menu a:hover {
@@ -148,10 +148,12 @@ h2{
 .filter {
   display: flex; 
   gap: 15px; 
+  justify-content: center;
+  align-items: center;
 }
 
 .filter button{
-    width: 173px;
+    min-width: 164px;
     height: 50px;
     padding: 4px 19px;
     box-sizing: border-box;
@@ -297,7 +299,7 @@ h3 {
 
 .hebergements-cards img{
     width: 100%;
-    max-height: 124px;
+    height: 124px;
     object-fit: cover;   
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -319,7 +321,7 @@ h3 {
 }
 
 .populaires-cards img {
-    height: 170px;
+    height: 146px;
     width: 33%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -379,7 +381,7 @@ h3 {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     width: 100%;
-    height: 500px;
+    height: 439px;
     object-fit: cover;
 }
 .activity h3 {
@@ -421,6 +423,21 @@ h5{
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .filter button{
+    width: 100%;
+    font-size: 16px;}
+
+   .case-filter{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   }
+
     .hebergements-and-populaires {
         flex-direction: column;
         gap: 50px;
@@ -431,8 +448,10 @@ h5{
     }
 
     .populaires {
-        width: 100%;
-       
+        width: 100%;   
+    }
+    .populaires-title{
+        margin-bottom: -15px;
     }
 
     .populaires-cards {
@@ -452,6 +471,13 @@ h5{
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+    .activity img{
+        height: 200px;
+    }
+    .activity .section-title{
+        margin-bottom: -10px;
+    }
+
     .cardbis img {
         height: 200px;}
 }
@@ -459,21 +485,33 @@ h5{
 /* Small devices (phones, less than 768px) */
 
      /* HEADER */ 
-@media (max-width: 767.98px){
-   
+@media (max-width: 767.98px){ 
 
- .main-container, body{
+h1, h2, h3, p {
+     margin: 0; 
+     padding: 0;
+     } 
+h1{
+    margin-bottom: 8px;
+} 
+
+.main-container{
     padding: 0;
     margin: 0;
- }   
+ }  
+ body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
 .main-nav{
-    flex-direction: column;
-    gap: 30px;
-    
+    flex-direction: column; 
 }
 
 .menu li { 
-    width: 50%; 
+    width: 50vw; 
+    position: relative;
 }
 
  .menu a {
@@ -484,45 +522,49 @@ h5{
     justify-content: center;
     text-align: center;
     padding-top: 0;
-    padding-bottom: 10px;    
+    padding-bottom: 10px;
+    border-top: none; /* Enlever l'ancienne barre du destokp*/
+    padding-top: 0  /* Enlever le padding du destokp qui faisait tout décaler */
     }
 
-.menu-border1{
-    position: absolute;
+.main-nav .menu {
+    margin: 0;
     padding: 0;
-    background-color:  #F2F2F2;
-    left: 50%;
-    width: 100vw;   /* viewport width = Largeur fenêtre / au lieu de 100% qui comprend les marges */ 
-    transform: translateX(-50vw); /* Petite triche pour faire décaler de 50% de l'écran après le remplissage 100vw pour ignorer la marge qui m'a fait galérer 1h */
-    height: 2px; 
-    margin: 0;   
-    }
+    width: 100%;
+    box-sizing: border-box;
+    gap: 0px;
+    
+}
+header{
+    position: relative;
+}
+.menu-border1,
+.menu-border2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%; /* 100% du li = 50vw */
+    background-color: #F2F2F2;
+}
 
-.menu-border2{
-    position: absolute;
-    padding: 0;
-    background-color:  #F2F2F2;
-    left: 50vw;   /* commence à la moitié de la page pour remplir le reste */
-    width: 50vw;
-    height: 2px; 
-    margin: 0;   
-    }
 
     /* HEADER OVER */
 .menu a:hover{
-    border-top: none; 
+    border-top:none; /* Enlever l'ancienne barre du destokp*/
+    padding-top: 0 /* Enlever le padding du destokp qui faisait tout décaler */
 }
-.menu li:hover .menu-border1 {
+.menu li:hover .menu-border1,.menu li:hover .menu-border2 {
     background-color: #0065FC;
 }
 
-.menu li:hover .menu-border2 {
-    background-color: #0065FC;
-}
+
 /* FIN HOVER */
 
 .info-group{
-    padding-bottom: 15px;
+    padding: 20px;
+    margin: 0;
+    margin-bottom: 15px;
 }
 
 .search-bar{
@@ -571,12 +613,14 @@ h5{
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     width: 100%;
+    place-items: center;
 }
 
 
 .filter button{
     font-size: 14px;
     font-weight: 700;
+    width: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -585,7 +629,10 @@ h5{
 }
 
 /*  Cartes les plus populaires et Hébergments */ 
-
+.hebergements-and-populaires{
+    margin: 0;
+    padding: 0;
+}
  .populaires{
     display: flex; 
     flex-direction: column;
@@ -622,10 +669,14 @@ h5{
     width: 100%;
 }
 
-
+.populaires-title{
+ margin-bottom: 0px;
+} 
+.section-title{
+ margin-bottom: -10px;
+}
 .hebergements-and-populaires .hebergements {
     background-color: transparent;
-    padding: 0;
 }
 .hebergements-and-populaires .populaires { /* griser uniquement la partie populaire*/
     background-color: var(--main-bg-color);
@@ -653,20 +704,23 @@ h5{
     box-shadow: 0px 4px 4px rgba(0,0,0,0.1);
     background-color: #fff;
 }
-
+.hebergements-cards .card img{
+    width: 100%;
+    height: 124px;
+}
 .hebergements-cards .card-content {
     padding: 15px;
 }
 
 /* ACTIVITES */
 .activity {
+    margin: 0;
+    padding: 0; 
     margin-top: 40px;
 }
-
-.activity-title{
-    margin-bottom:50px;
+.activity .section-title{
+    margin-bottom: -15px;
 }
-
 .cardbis {
     display: flex;
     flex-direction: column;
@@ -679,6 +733,7 @@ h5{
 }
 .activity img{
     width: 100%;
+    height: 141px;
 }
 .activity-card .cardbis{
     box-shadow: 0px 4px 4px rgba(0,0,0,0.1);
@@ -691,6 +746,6 @@ h5{
     display: flex;
     flex-direction: column;
     align-items: baseline;
-   
-}
+    padding: 0;
+   }
 }
